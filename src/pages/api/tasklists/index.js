@@ -27,7 +27,14 @@ export async function handler(req, res) {
         .status(200)
         .json({ status: true, message: "Task list not found", data: null });
 
-    res.status(200).json({ status: true, message: "Task list found", data });
+    res
+      .status(200)
+      .json({
+        status: true,
+        message: "Task list found",
+        length: data.length,
+        data,
+      });
   } catch (error) {
     if (error instanceof TypeError)
       return res
