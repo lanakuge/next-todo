@@ -49,5 +49,5 @@ export async function handler(req, res) {
     });
   }
 }
-// export default handler;
+
 export default verifyToken(handler);
