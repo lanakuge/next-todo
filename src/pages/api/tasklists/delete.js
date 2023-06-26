@@ -1,7 +1,5 @@
 import { verifyToken } from "@/middleware/verifyToken";
 import { PrismaClient } from "@prisma/client";
-import cookie from "cookie";
-import jwt from "jsonwebtoken";
 
 const prisma = new PrismaClient();
 
@@ -41,7 +39,6 @@ export async function handler(req, res) {
     return res.status(500).json({
       status: false,
       message: "Internal server error!",
-      id: id ? id : "No id",
       error: `${error}`,
     });
   }

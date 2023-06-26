@@ -1,4 +1,3 @@
-import { verifyToken } from "@/middleware/verifyToken";
 import { PrismaClient } from "@prisma/client";
 import cookie from "cookie";
 import jwt from "jsonwebtoken";
