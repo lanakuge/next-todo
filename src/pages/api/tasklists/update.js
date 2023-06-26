@@ -24,7 +24,7 @@ export async function handler(req, res) {
         .status(400)
         .json({ status: true, message: "Can't find task list" });
 
-    // delete task list
+    // update task list
     const data = await prisma.taskList.update({
       where: {
         id: id,
