@@ -23,11 +23,10 @@ export default async function handler(req, res) {
       },
     });
 
-    if (duplicated) {
+    if (duplicated)
       return res
         .status(200)
         .json({ status: false, message: "Email is not available" });
-    }
 
     // password match
     if (password !== confirmPassword)
@@ -37,13 +36,13 @@ export default async function handler(req, res) {
       });
 
     // email validation
-    if (!validator.isEmail(email)) {
+    if (!validator.isEmail(email))
       return res.status(400).json({
         status: false,
         message: "Invalid email format!",
       });
-    }
 
+    // create user
     const data = await prisma.user.create({
       data: {
         name,

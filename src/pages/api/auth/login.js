@@ -17,12 +17,11 @@ export default async function handler(req, res) {
         .json({ status: false, message: "Method not allowed" });
 
     // email validation
-    if (!validator.isEmail(email)) {
+    if (!validator.isEmail(email))
       return res.status(400).json({
         status: false,
         message: "Invalid email format!",
       });
-    }
 
     // email check
     const data = await prisma.user.findUnique({
