@@ -1,6 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import cookie from "cookie";
-import jwt from "jsonwebtoken";
 
 const prisma = new PrismaClient();
 
@@ -39,14 +37,12 @@ export async function handler(req, res) {
         .status(200)
         .json({ status: true, message: "Task not found", data: null });
 
-    res
-      .status(200)
-      .json({
-        status: true,
-        message: "Tasks found",
-        length: data.length,
-        data,
-      });
+    res.status(200).json({
+      status: true,
+      message: "Tasks found",
+      length: data.length,
+      data,
+    });
   } catch (error) {
     if (error instanceof TypeError)
       return res
