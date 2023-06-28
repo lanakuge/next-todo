@@ -28,6 +28,7 @@ export default function Home() {
   ];
   const technologies = [
     { name: "ReactJS", link: "/technologies/react.png" },
+    { name: "NextJS", link: "/technologies/next.svg" },
     { name: "Vercel", link: "/technologies/vercel.svg" },
     { name: "Tailwind CSS", link: "/technologies/tailwind.png" },
     { name: "PostgreSQL", link: "/technologies/postgresql.png" },
@@ -36,7 +37,7 @@ export default function Home() {
     { name: "NodeJS", link: "/technologies/node.png" },
     { name: "Webpack", link: "/technologies/webpack.png" },
     { name: "Google", link: "/technologies/google.png" },
-    { name: "Freepik", link: "/technologies/freepik.png" },
+    { name: "Github", link: "/technologies/github.png" },
   ];
 
   function hamburgerHandler() {
@@ -89,7 +90,7 @@ export default function Home() {
             </Link>
             <Link
               className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
-              href="#"
+              href="#pricing"
               scroll={false}>
               Pricing
             </Link>
@@ -127,7 +128,7 @@ export default function Home() {
         <div className="w-full m-2">
           <Link
             className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
-            href="#"
+            href="#pricing"
             scroll={false}
             onClick={hamburgerHandler}>
             Pricing
@@ -153,7 +154,7 @@ export default function Home() {
             Stay organized and boost your productivity with our intuitive and
             feature-rich to-do list tool.{" "}
             <span className="lg:inline hidden">
-              Whether you`&apos`re managing personal tasks, organizing projects,
+              Whether you&apos;re managing personal tasks, organizing projects,
               or collaborating with a team, our platform has you covered.
               Streamline your workflow, set priorities, and never miss a
               deadline again.
@@ -223,6 +224,185 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </div>
+      {/* pricing */}
+      <div className="container my-32 sm:px-0">
+        <p
+          id="pricing"
+          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24">
+          Pricing
+        </p>
+        <p className="text-stone-50 text-center mb-8">
+          Start building for free, collaborate with a team, then scale to
+          millions of users
+        </p>
+        <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
+          <div className="w-full sm:w-1/4 mb-4 sm:mb-0">
+            <div className="rounded-lg bg-stone-900 shadow-lg px-5 py-4 border border-black">
+              <p className="font-semibold text-xl text-stone-50">Free Plan</p>
+              <p className="font-extralight text-sm text-stone-50 mb-1">
+                Perfect for high school student
+              </p>
+              <hr className="mb-10 mt-4 opacity-30" />
+              <p className="text-5xl font-bold text-stone-50">
+                $0<span className="text-sm font-extralight">/month</span>
+              </p>
+              <hr className="mt-10 mb-4 opacity-30" />
+              <ul className="text-stone-50">
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Easy Task Management
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Flexible Task Organization
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Personalized Dashboard
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Collaborative Workspaces
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Unlimited Access
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="x.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Support Developers
+                </li>
+              </ul>
+              <div className="flex justify-center mt-6">
+                <Link
+                  href="#"
+                  className="w-full py-2 rounded-lg text-center font-bold text-stone-950 bg-indigo-400">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-full sm:w-1/4">
+            <div className="rounded-lg bg-stone-900 shadow-lg px-5 py-4 border border-black">
+              <p className="font-semibold text-xl text-stone-50">Profesional</p>
+              <p className="font-extralight text-sm text-stone-50 mb-1">
+                Perfect for worker
+              </p>
+              <hr className="mb-10 mt-4 opacity-30" />
+              <p className="text-5xl font-bold text-stone-50">
+                $1<span className="text-sm font-extralight">/month</span>
+              </p>
+              <hr className="mt-10 mb-4 opacity-30" />
+              <ul className="text-stone-50">
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Easy Task Management
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Flexible Task Organization
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Personalized Dashboard
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Collaborative Workspaces
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Unlimited Access
+                </li>
+                <li className="mb-2">
+                  <Image
+                    src="check.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    className="inline mr-1"
+                  />
+                  Support Developers
+                </li>
+              </ul>
+              <div className="flex justify-center mt-6">
+                <Link
+                  href="https://saweria.co/lanakuge"
+                  target="_blank"
+                  className="w-full py-2 rounded-lg text-center font-bold text-stone-950 bg-indigo-400">
+                  Donate Now
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
