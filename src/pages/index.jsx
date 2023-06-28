@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
 
 export default function Home() {
   const [hamburger, setHamburger] = useState(false);
@@ -39,6 +40,10 @@ export default function Home() {
     { name: "Google", link: "/technologies/google.png" },
     { name: "Github", link: "/technologies/github.png" },
   ];
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   function hamburgerHandler() {
     const navResponsive = document.getElementById("nav-responsive");
@@ -185,13 +190,17 @@ export default function Home() {
       <div className="container my-32 sm:px-0">
         <p
           id="features"
-          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24">
+          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24"
+          data-aos="fade-up">
           Features
         </p>
         <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
           {feature.map((data, index) => {
             return (
-              <div className="w-full md:w-1/2 lg:w-1/3 p-4" key={index}>
+              <div
+                className="w-full md:w-1/2 lg:w-1/3 p-4"
+                key={index}
+                data-aos="zoom-in">
                 <p className="font-semibold text-indigo-400 text-center lg:text-left">
                   {data.title}
                 </p>
@@ -204,7 +213,9 @@ export default function Home() {
       <hr className="border-stone-800" />
       {/* technologies */}
       <div className="container my-32 sm:px-0">
-        <p className="font-bold text-indigo-400 text-center text-4xl mb-8 scroll-mt-24">
+        <p
+          className="font-bold text-indigo-400 text-center text-4xl mb-8 scroll-mt-24"
+          data-aos="fade-up">
           Technologies
         </p>
         <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
@@ -212,7 +223,8 @@ export default function Home() {
             return (
               <div
                 className="w-1/3 md:w-1/4 lg:w-1/6 flex justify-center items-center p-4 group relative"
-                key={index}>
+                key={index}
+                data-aos="zoom-in">
                 <Image
                   src={data.link}
                   alt={data.name}
@@ -235,15 +247,18 @@ export default function Home() {
       <div className="container my-32 sm:px-0">
         <p
           id="pricing"
-          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24">
+          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24"
+          data-aos="fade-up">
           Pricing
         </p>
-        <p className="text-stone-50 text-center mb-8">
+        <p className="text-stone-50 text-center mb-8" data-aos="fade-up">
           Start building for free, collaborate with a team, then scale to
           millions of users
         </p>
         <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
-          <div className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
+          <div
+            className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0"
+            data-aos="fade-right">
             <div className="rounded-lg bg-stone-900 shadow-lg px-5 py-4 border border-black">
               <p className="font-semibold text-xl text-stone-50">Free Plan</p>
               <p className="font-extralight text-sm text-stone-50 mb-1">
@@ -325,7 +340,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <div
+            className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4"
+            data-aos="fade-left">
             <div className="rounded-lg bg-stone-900 shadow-lg px-5 py-4 border border-black">
               <p className="font-semibold text-xl text-stone-50">Profesional</p>
               <p className="font-extralight text-sm text-stone-50 mb-1">
@@ -414,7 +431,7 @@ export default function Home() {
       {/* footer */}
       <div className="container mt-32 mb-16 sm:px-0">
         <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
-          <div className="lg:w-2/6 w-full flex flex-wrap">
+          <div className="lg:w-2/6 w-full flex flex-wrap" data-aos="fade-up">
             <div className="w-full justify-center text-center">
               <Link
                 className="px-4 py-2 text-4xl rounded-lg font-black text-stone-50"
@@ -473,7 +490,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+          <div
+            className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50"
+            data-aos="fade-up">
             <p className="font-bold mb-2">Product</p>
             <Link
               href="."
@@ -481,7 +500,9 @@ export default function Home() {
               LanaTask
             </Link>
           </div>
-          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+          <div
+            className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50"
+            data-aos="fade-up">
             <p className="font-bold  mb-2">Developers</p>
             <Link
               href="https://saweria.co/lanakuge"
@@ -489,10 +510,14 @@ export default function Home() {
               Support
             </Link>
           </div>
-          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+          <div
+            className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50"
+            data-aos="fade-up">
             <p className="font-bold  mb-2">Contact</p>
           </div>
-          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+          <div
+            className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50"
+            data-aos="fade-up">
             <p className="font-bold  mb-2">Company</p>
             <Link
               href="."
