@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [hamburger, setHamburger] = useState(false);
@@ -153,8 +153,8 @@ export default function Home() {
             Stay organized and boost your productivity with our intuitive and
             feature-rich to-do list tool.{" "}
             <span className="lg:inline hidden">
-              Whether you're managing personal tasks, organizing projects, or
-              collaborating with a team, our platform has you covered.
+              Whether you`&apos`re managing personal tasks, organizing projects,
+              or collaborating with a team, our platform has you covered.
               Streamline your workflow, set priorities, and never miss a
               deadline again.
             </span>
