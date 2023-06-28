@@ -77,25 +77,25 @@ export default function Home() {
           </div>
           <div className="m-4 items-center font-semibold gap-2 sm:flex hidden">
             <Link
-              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
+              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400 duration-300"
               href="#"
               scroll={false}>
               Dashboard
             </Link>
             <Link
-              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
+              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400 duration-300"
               href="#features"
               scroll={false}>
               Features
             </Link>
             <Link
-              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
+              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400 duration-300"
               href="#pricing"
               scroll={false}>
               Pricing
             </Link>
             <Link
-              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
+              className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400 duration-300"
               href="#"
               scroll={false}>
               Login
@@ -180,6 +180,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <hr className="border-stone-800" />
       {/* feature */}
       <div className="container my-32 sm:px-0">
         <p
@@ -199,34 +200,37 @@ export default function Home() {
             );
           })}
         </div>
-        <div className="container my-32 sm:px-0">
-          <p className="font-bold text-indigo-400 text-center text-4xl mb-8 scroll-mt-24">
-            Technologies
-          </p>
-          <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
-            {technologies.map((data, index) => {
-              return (
-                <div
-                  className="w-1/3 md:w-1/4 lg:w-1/6 flex justify-center items-center p-4 group relative"
-                  key={index}>
-                  <Image
-                    src={data.link}
-                    alt={data.name}
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                    className="w-full sm:w-3/4 lg:w-2/4 h-auto"
-                    priority={true}
-                  />
-                  <span className="absolute top-10 scale-0 transition-all rounded -translate-y-14 bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
-                    {data.name}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
+      </div>
+      <hr className="border-stone-800" />
+      {/* technologies */}
+      <div className="container my-32 sm:px-0">
+        <p className="font-bold text-indigo-400 text-center text-4xl mb-8 scroll-mt-24">
+          Technologies
+        </p>
+        <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
+          {technologies.map((data, index) => {
+            return (
+              <div
+                className="w-1/3 md:w-1/4 lg:w-1/6 flex justify-center items-center p-4 group relative"
+                key={index}>
+                <Image
+                  src={data.link}
+                  alt={data.name}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full sm:w-3/4 lg:w-2/4 h-auto"
+                  priority={true}
+                />
+                <span className="absolute top-10 scale-0 transition-all rounded -translate-y-14 bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
+                  {data.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
+      <hr className="border-stone-800" />
       {/* pricing */}
       <div className="container my-32 sm:px-0">
         <p
@@ -239,7 +243,7 @@ export default function Home() {
           millions of users
         </p>
         <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
-          <div className="w-full sm:w-1/4 mb-4 sm:mb-0">
+          <div className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
             <div className="rounded-lg bg-stone-900 shadow-lg px-5 py-4 border border-black">
               <p className="font-semibold text-xl text-stone-50">Free Plan</p>
               <p className="font-extralight text-sm text-stone-50 mb-1">
@@ -315,13 +319,13 @@ export default function Home() {
               <div className="flex justify-center mt-6">
                 <Link
                   href="#"
-                  className="w-full py-2 rounded-lg text-center font-bold text-stone-950 bg-indigo-400">
+                  className="w-full py-2 rounded-lg text-center font-bold border border-transparent text-stone-950 bg-indigo-400 hover:bg-stone-900 hover:text-indigo-400 hover:border-indigo-400 hover:border duration-150">
                   Get Started
                 </Link>
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-1/4">
+          <div className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4">
             <div className="rounded-lg bg-stone-900 shadow-lg px-5 py-4 border border-black">
               <p className="font-semibold text-xl text-stone-50">Profesional</p>
               <p className="font-extralight text-sm text-stone-50 mb-1">
@@ -398,11 +402,113 @@ export default function Home() {
                 <Link
                   href="https://saweria.co/lanakuge"
                   target="_blank"
-                  className="w-full py-2 rounded-lg text-center font-bold text-stone-950 bg-indigo-400">
+                  className="w-full py-2 rounded-lg text-center font-bold border border-transparent text-stone-950 bg-indigo-400 hover:bg-stone-900 hover:text-indigo-400 hover:border-indigo-400 hover:border duration-150">
                   Donate Now
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <hr className="border-stone-800" />
+      {/* footer */}
+      <div className="container mt-32 mb-16 sm:px-0">
+        <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
+          <div className="lg:w-2/6 w-full flex flex-wrap">
+            <div className="w-full justify-center text-center">
+              <Link
+                className="px-4 py-2 text-4xl rounded-lg font-black text-stone-50"
+                href=".">
+                Lana<span className="text-indigo-400">Kuge</span>
+              </Link>
+            </div>
+            <div className="w-full flex justify-evenly mt-4 lg:mt-2 opacity-75">
+              <div className="sm:w-[12%] w-1/6">
+                <Link href="https://instagram.com/maulananizhar_">
+                  <Image
+                    src="/social/instagram.svg"
+                    alt="Instagram"
+                    width="30"
+                    height="30"
+                    className="m-auto"
+                    priority={true}
+                  />
+                </Link>
+              </div>
+              <div className="sm:w-[12%] w-1/6">
+                <Link href="https://github.com/lanakuge">
+                  <Image
+                    src="/social/github.svg"
+                    alt="Github"
+                    width="30"
+                    height="30"
+                    className="m-auto"
+                    priority={true}
+                  />
+                </Link>
+              </div>
+              <div className="sm:w-[12%] w-1/6">
+                <Link href="https://twitter.com">
+                  <Image
+                    src="/social/twitter.svg"
+                    alt="Twitter"
+                    width="30"
+                    height="30"
+                    className="m-auto"
+                    priority={true}
+                  />
+                </Link>
+              </div>
+              <div className="sm:w-[12%] w-1/6">
+                <Link href="https://youtube.com">
+                  <Image
+                    src="/social/youtube.svg"
+                    alt="YouTube"
+                    width="30"
+                    height="30"
+                    className="m-auto"
+                    priority={true}
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+            <p className="font-bold mb-2">Product</p>
+            <Link
+              href="."
+              className="hover:text-indigo-400 duration-300 block opacity-75 text-base">
+              LanaTask
+            </Link>
+          </div>
+          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+            <p className="font-bold  mb-2">Developers</p>
+            <Link
+              href="https://saweria.co/lanakuge"
+              className="hover:text-indigo-400 duration-300 block opacity-75 text-base">
+              Support
+            </Link>
+          </div>
+          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+            <p className="font-bold  mb-2">Contact</p>
+          </div>
+          <div className="lg:w-1/6 w-full pl-0 lg:pl-4 text-center lg:text-left mt-8 lg:mt-0 font-light text-stone-50">
+            <p className="font-bold  mb-2">Company</p>
+            <Link
+              href="."
+              className="hover:text-indigo-400 duration-300 block opacity-75 text-base">
+              Terms of Service
+            </Link>
+            <Link
+              href="."
+              className="hover:text-indigo-400 duration-300 block opacity-75 text-base">
+              Privacy Policy
+            </Link>
+            <Link
+              href="."
+              className="hover:text-indigo-400 duration-300 block opacity-75 text-base">
+              Support Policy
+            </Link>
           </div>
         </div>
       </div>
