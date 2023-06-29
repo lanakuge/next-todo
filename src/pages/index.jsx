@@ -101,7 +101,7 @@ export default function Home() {
             </Link>
             <Link
               className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400 duration-300"
-              href="#"
+              href="./auth/login"
               scroll={false}>
               Login
             </Link>
@@ -142,7 +142,7 @@ export default function Home() {
         <div className="w-full m-2">
           <Link
             className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
-            href="#"
+            href="./auth/login"
             scroll={false}
             onClick={hamburgerHandler}>
             Login
@@ -187,10 +187,9 @@ export default function Home() {
       </div>
       <hr className="border-stone-800" />
       {/* feature */}
-      <div className="container my-32 sm:px-0">
+      <div id="features" className="container my-32 sm:px-0 scroll-mt-24">
         <p
-          id="features"
-          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24"
+          className="font-bold text-indigo-400 text-center text-4xl mb-4"
           data-aos="fade-up">
           Features
         </p>
@@ -244,18 +243,19 @@ export default function Home() {
       </div>
       <hr className="border-stone-800" />
       {/* pricing */}
-      <div className="container my-32 sm:px-0">
+      <div id="pricing" className="container my-32 sm:px-0 scroll-mt-24">
         <p
-          id="pricing"
-          className="font-bold text-indigo-400 text-center text-4xl mb-4 scroll-mt-24"
+          className="font-bold text-indigo-400 text-center text-4xl mb-4"
           data-aos="fade-up">
           Pricing
         </p>
-        <p className="text-stone-50 text-center mb-8" data-aos="fade-up">
+        <p
+          className="text-stone-50 text-center mb-8 px-6 sm:px-0"
+          data-aos="fade-up">
           Start building for free, collaborate with a team, then scale to
           millions of users
         </p>
-        <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
+        <div className="flex flex-wrap text-stone-50 justify-evenly px-16 overflow-x-hidden">
           <div
             className="w-full px-0 md:px-4 lg:px-0 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0"
             data-aos="fade-right">
@@ -430,7 +430,7 @@ export default function Home() {
       <hr className="border-stone-800" />
       {/* footer */}
       <div className="container mt-32 mb-16 sm:px-0">
-        <div className="flex flex-wrap text-stone-50 justify-evenly px-16">
+        <div className="flex flex-wrap text-stone-50 justify-evenly px-16 overflow-y-hidden">
           <div className="lg:w-2/6 w-full flex flex-wrap" data-aos="fade-up">
             <div className="w-full justify-center text-center">
               <Link
