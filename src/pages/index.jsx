@@ -83,7 +83,7 @@ export default function Home() {
           <div className="m-4 items-center font-semibold gap-2 sm:flex hidden">
             <Link
               className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400 duration-300"
-              href="#"
+              href="/dashboard"
               scroll={false}>
               Dashboard
             </Link>
@@ -115,7 +115,7 @@ export default function Home() {
         <div className="w-full m-2">
           <Link
             className="px-4 py-2 rounded-lg text-stone-50 hover:text-indigo-400"
-            href="#"
+            href="/dashboard"
             scroll={false}
             onClick={hamburgerHandler}>
             Dashboard
