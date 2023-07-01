@@ -1,11 +1,32 @@
+import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Login() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function loginHandler(e) {
+    e.preventDefault();
+    try {
+      const data = await axios.post(
+        `${process.env.HOST}api/auth/login`,
+        { email, password },
+        { withCredentials: true }
+      );
+      router.push("/dashboard");
+    } catch (error) {
+      // console.log(error);
+    }
+  }
+
   return (
     <>
       <div className="container flex justify-center items-center h-screen">
         <div className="w-9/12 sm:w-8/12 lg:w-1/2 xl:w-1/3 border rounded-lg border-black bg-black px-10 sm:px-16 py-12 shadow-lg">
-          <form>
+          <form onSubmit={loginHandler}>
             <p className="text-center text-2xl font-black text-stone-50">
               Login
             </p>
@@ -14,6 +35,10 @@ export default function Login() {
               <input
                 type="email"
                 id="email"
+                value={email}
+                onChange={e => {
+                  setEmail(e.target.value);
+                }}
                 className="bg-black border rounded-md border-white/50 w-full text-stone-400 px-2 py-1 ring-white focus:ring-1"
                 required
               />
@@ -25,6 +50,10 @@ export default function Login() {
               <input
                 type="password"
                 id="password"
+                value={password}
+                onChange={e => {
+                  setPassword(e.target.value);
+                }}
                 className="bg-black border rounded-md border-white/50 w-full text-stone-400 px-2 py-1 ring-white focus:ring-1"
                 required
               />
