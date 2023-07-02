@@ -68,7 +68,7 @@ export default function Home() {
           <div className="m-4 flex items-center font-bold">
             <Link
               className="px-4 py-2 text-xl rounded-lg text-stone-50"
-              href=".">
+              href="/">
               Lana<span className="text-indigo-400">Task</span>
             </Link>
           </div>
@@ -167,7 +167,7 @@ export default function Home() {
           </p>
           <div className="sm:text-left text-center">
             <Link
-              href="#"
+              href="/auth/login"
               className="px-4 py-2 rounded-lg font-bold text-stone-950 bg-indigo-400">
               Try it for free
             </Link>
@@ -333,7 +333,7 @@ export default function Home() {
               </ul>
               <div className="flex justify-center mt-6">
                 <Link
-                  href="#"
+                  href="/auth/login"
                   className="w-full py-2 rounded-lg text-center font-bold border border-transparent text-stone-950 bg-indigo-400 hover:bg-stone-900 hover:text-indigo-400 hover:border-indigo-400 hover:border duration-150">
                   Get Started
                 </Link>
