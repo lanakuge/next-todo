@@ -4,9 +4,14 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import jwt from "jsonwebtoken";
 import { useEffect, useState } from "react";
+import Checkbox from "@/components/checkbox";
 
 export default function Dashboard() {
   const router = useRouter();
+  const test = [1, 2];
+  // const test = [
+  //   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  // ];
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -86,7 +91,7 @@ export default function Dashboard() {
   return (
     <>
       <div className="flex">
-        <div className="flex flex-col px-3 py-3 w-1/6 h-screen max-h-screen overflow-y-auto bg-black/10">
+        <div className="flex flex-col px-3 py-3 w-1/6 max-h-screen overflow-y-auto bg-black/10">
           <div className="text-left w-full">
             <Link
               className="text-xl rounded-lg text-stone-50 font-bold"
@@ -188,10 +193,10 @@ export default function Dashboard() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col w-5/6 px-3 py-3">
+        <div className="flex flex-col w-5/6 px-3 py-3 max-h-screen overflow-y-auto">
           <div className="h-1/6"></div>
           <div className="h-2/6"></div>
-          <div className="px-3 py-3 bg-stone-900/20 rounded-lg overflow-y-auto">
+          <div className="px-3 py-3 bg-stone-900/20 rounded-lg h-3/6 overflow-y-auto">
             <div className="flex flex-row text-center sticky top-0">
               <label className="w-full px-2">
                 <input
@@ -242,15 +247,21 @@ export default function Dashboard() {
                 </div>
               </label>
             </div>
-            <div className="flex flex-col text-8xl">
-              <p>lorem</p>
-              <p>lorem</p>
-              <p>lorem</p>
-              <p>lorem</p>
-              <p>lorem</p>
-              <p>lorem</p>
-              <p>lorem</p>
-              <p>lorem</p>
+            <div className="flex flex-wrap">
+              {test.map((data, i) => {
+                return (
+                  <div className="w-1/4 p-2" key={i}>
+                    <div className="border-0 rounded-md bg-red-950 px-3 py-2">
+                      <div className="flex justify-between">
+                        <p className="text-sm">Today</p>
+                        <Checkbox />
+                      </div>
+                      <p className="text-2xl font-bold my-4">Title</p>
+                      <p className="text-xs">09.00 AM - 09.30 AM</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
